@@ -515,7 +515,6 @@
                         if (pos < winTop + 600) {
                             $(this).addClass("slide");
                             if ($(this).find(".customers-count p span")) {
-                                console.log(Number(document.querySelector("div.customers-count > p.count > span").innerText));
                                 if (document.querySelector("div.customers-count > p.count > span").innerText !== "98") {
                                     function doSetTimeout(i) {
                                         if (Number(document.querySelector("div.customers-count > p.count > span").innerText) < 99)
@@ -523,7 +522,6 @@
                                         $(".customers-count p span").html(i);
                                     }, i * 15);
 
-                                    console.log($(this).find(".customers-count p span").text())
                                 }
 
                                 for (var i = 1; i < 99; ++i) {
