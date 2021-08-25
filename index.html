@@ -319,7 +319,7 @@
             }
 
             div.img-counter {
-            width: 100%;
+                width: 100%;
             }
         }
 
@@ -329,8 +329,8 @@
             }
 
             div.img-counter {
-            width: 100%;
-            display: block;
+                width: 100%;
+                display: block;
             }
         }
     </style>
@@ -461,7 +461,8 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <p>Contact us and we'll get back to you within 24 hours.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> No. 2, Geraldu Farrugia Street; Zebbug ZBG 4351; Malta</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> No. 2, Geraldu Farrugia Street; Zebbug ZBG
+                        4351; Malta</p>
                     <p><span class="glyphicon glyphicon-phone"></span> +356 27 78 11 74</p>
                     <p><span class="glyphicon glyphicon-envelope"></span> info@pionext.com</p>
                     <p>Business reg. = C 60904</p>
@@ -518,31 +519,32 @@
                                 if (document.querySelector("div.customers-count > p.count > span").innerText !== "98") {
                                     function doSetTimeout(i) {
                                         if (Number(document.querySelector("div.customers-count > p.count > span").innerText) < 99)
-                                    setTimeout(function () {
-                                        $(".customers-count p span").html(i);
-                                    }, i * 15);
+                                            setTimeout(function () {
+                                                $(".customers-count p span").html(i);
+                                            }, i * 15);
+
+                                    }
+
+                                    for (var i = 1; i < 99; ++i) {
+                                        doSetTimeout(i);
+                                    }
 
                                 }
-
-                                for (var i = 1; i < 99; ++i) {
-                                    doSetTimeout(i);
-                                }
-                                    
                             }
-                                }
 
-                                
+
 
                             if ($(this).find(".years-count p span")) {
+                                if (document.querySelector("div.years-count > p.count > span").innerText !== "8") {
+                                    function doSetTimeout(i) {
+                                        setTimeout(function () {
+                                            $(".years-count p span").html(i);
+                                        }, i * 200);
+                                    }
 
-                                function doSetTimeout(i) {
-                                    setTimeout(function () {
-                                        $(".years-count p span").html(i);
-                                    }, i * 200);
+                                    for (var i = 1; i < 9; ++i)
+                                        doSetTimeout(i);
                                 }
-
-                                for (var i = 1; i < 9; ++i)
-                                    doSetTimeout(i);
                             }
                         }
                     });
